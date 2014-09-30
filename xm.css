@@ -1,0 +1,1632 @@
+/*
+*********** ********* * *       *
+          * *       * * *       *
+          * *       * * *       *
+*********** *       * * *********
+*           *       * *         *
+*           *       * *         *
+*********** ********* *         *
+xiaomashijia.com
+version:0.000000001
+*/
+
+/* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+
+/*@font-face {
+    font-family: txtsk;
+    src: url(./fonts/txtsk.ttf);
+}*/
+
+/*@font-face {
+    font-family: mnjyy;
+    src: url(./fonts/mnjyy.ttf);
+}*/
+
+body,h1,p,ul,li,span,h3,a {
+    padding: 0;
+    margin: 0;
+}
+
+.clearboth{
+    clear: both;
+}
+
+body{
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+
+#indexview {
+    -skrollr-animation-name:mainscroll;
+    background-color: #06397F;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+}
+
+#mainheader{
+    margin: auto;
+}
+
+#ourapp {
+    -skrollr-animation-name:gone;
+    width: 500px;
+    transition: opacity 1s, transform 1s, left 1s;
+    -moz-transition: opacity 1s, -moz-transform 1s, left 1s;	/* Firefox 4 */
+    -webkit-transition: opacity 1s, -webkit-transform 1s, left 1s;	/* Safari 和 Chrome */
+    -o-transition: opacity 1s, -o-transform 1s, left 1s;
+}
+
+.destitle {
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.desbody {
+    text-align: center;
+    color: #ffffff;
+    font-size: 32px;
+}
+
+#appdownload {
+    -skrollr-animation-name:downloadapp;
+    width: 280px;
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+
+    display: flex;
+    position: relative;
+    top: 30px;
+    transition: top 1s, width 1s, opacity 1s;
+    -moz-transition: top 1s, width 1s, opacity 1s;	/* Firefox 4 */
+    -webkit-transition: top 1s, width 1s, opacity 1s;	/* Safari 和 Chrome */
+    -o-transition: top 1s, width 1s, opacity 1s;
+
+}
+
+#androiddl{
+    flex: 2;
+}
+.androidlogo{
+    -skrollr-animation-name:changefloat;
+    transition: transform 1s;
+    -moz-transition: -moz-transform 1s;	/* Firefox 4 */
+    -webkit-transition: -webkit-transform 1s;	/* Safari 和 Chrome */
+    -o-transition: -o-transform 1s;
+    -skrollr-animation-name:rotateround;
+    background: url(./images/anzhuo－bt.png) no-repeat;
+    width: 64px;
+    height: 64px;
+    background-size: 100% 100%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#iosdl{
+    flex: 2;
+}
+
+.ioslogo{
+    -skrollr-animation-name:changefloat;
+    transition: transform 1s;
+    -moz-transition: -moz-transform 1s;	/* Firefox 4 */
+    -webkit-transition: -webkit-transform 1s;	/* Safari 和 Chrome */
+    -o-transition: -o-transform 1s;
+    -skrollr-animation-name:rotateround;
+    background: url(./images/iOS－bt.png) no-repeat;
+    width: 64px;
+    height: 64px;
+    background-size: 100% 100%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.dldes_main{
+    -skrollr-animation-name:downloaddes;
+    font-size: 16px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+}
+
+#applogo {
+    background:url(./images/icon.png) no-repeat top center;
+    width: 128px;
+    height: 128px;
+    background-size: 100% 100%;
+    margin: auto;
+
+}
+
+#des{
+    margin-top:30px;
+}
+
+#download {
+    -skrollr-animation-name:downloadpop;
+    background-color: rgb(255,255,255);
+    opacity: 0.4;
+    transition: height 1s;
+    -moz-transition: height 1s;	/* Firefox 4 */
+    -webkit-transition: height 1s;	/* Safari 和 Chrome */
+    -o-transition: height 1s;
+    width: 100%;
+    position: absolute;
+    z-index:99999;
+}
+
+#secview {
+    -skrollr-animation-name:secscroll;
+    background-color: #f2da35;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9998;
+}
+
+#thirdview {
+    -skrollr-animation-name:thirdscroll;
+    background-color: #6bcd40;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9997;
+}
+
+#fourthview{
+    -skrollr-animation-name:fourthscroll;
+    background-color: #4c9fe5;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9996;
+}
+
+#fifthview{
+    -skrollr-animation-name:fifthscroll;
+    background-color: #d456ac;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9995;
+}
+
+#sixthview{
+    -skrollr-animation-name:sixthscroll;
+    background-color: #e27052;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9994;
+}
+
+#xm_footer{
+    background-color: #6e8bd2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9993;
+}
+
+#logo {
+    -skrollr-animation-name:gonone;
+    background:#666666 url(./images/logo.png) no-repeat center center;
+    opacity: 0.4;
+    width: 70px;
+    padding: 20px 10px;
+    position: absolute;
+    left: 20%;
+    top:0;
+    z-index:10000;
+
+    transition: height 1s;
+    -moz-transition: height 1s;	/* Firefox 4 */
+    -webkit-transition: height 1s;	/* Safari 和 Chrome */
+    -o-transition: height 1s;
+
+}
+
+/*
+* viewbody整体布局
+*/
+.viewbody{
+    display: flex;
+}
+
+.viewbody-main{
+    margin: auto;
+    padding: 20px;
+}
+
+/*
+* 第一版页面布局
+*/
+.secviewren{
+    -skrollr-animation-name:secren;
+    background: url(./images/1-ren.png) no-repeat top center;
+    width: 150px;
+    height: 400px;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+
+    transition: left 1s;
+    -moz-transition: left 1s;	/* Firefox 4 */
+    -webkit-transition: left 1s;	/* Safari 和 Chrome */
+    -o-transition: left 1s;
+}
+
+.viewbody-footer{
+    clear: both;
+}
+
+.viewbody-footer-titile{
+    color: #333333;
+    opacity: 0.5;
+    font-size: 24px;
+    position: relative;
+    top:-100px;
+
+}
+
+#secview .viewbody{
+    -skrollr-animation-name:fcutopacity;
+    background: url("./images/1-lu.png") no-repeat center 200px;
+    background-size: 587px 181px;
+    position: relative;
+    top:100px;
+}
+
+#secview .f-ren-y{
+    /*background: url(./images/1-yinying.png) no-repeat center bottom;*/
+    width: 87px;
+    height: 133px;
+    background-size: 50px 80px;
+    position: relative;
+    left: 222px;
+    top: -128px;
+    z-index: -1;
+}
+
+#secview .s-one{
+    -skrollr-animation-name:s-one;
+    background: url(./images/1-4s-1.png) no-repeat left top;
+    background-size: 100px 120px;
+    width: 100px;
+    height: 120px;
+    z-index: -10;
+    position: relative;
+    top:55px;
+    left:-45px;
+
+    transition: top 1s;
+    -moz-transition: top 1s;	/* Firefox 4 */
+    -webkit-transition: top 1s;	/* Safari 和 Chrome */
+    -o-transition: top 1s;
+}
+
+#secview .f-rili{
+    -skrollr-animation-name:f-rili;
+    background: url(./images/1-rili.png) no-repeat;
+    width: 150px;
+    height: 120px;
+    background-size: 100% 100%;
+    position: relative;
+    top:150px;
+    left: 0;
+
+    transition: top 1s;
+    -moz-transition: top 1s;	/* Firefox 4 */
+    -webkit-transition: top 1s;	/* Safari 和 Chrome */
+    -o-transition: top 1s;
+}
+
+#secview .s-two{
+    -skrollr-animation-name:s-two;
+    background: url(./images/1-4s-2.png) no-repeat;
+    width: 200px;
+    height: 180px;
+    background-size: 100% 100%;
+    position: relative;
+    top:80px;
+    left: 90px;
+
+    transition: top 1s;
+    -moz-transition: top 1s;	/* Firefox 4 */
+    -webkit-transition: top 1s;	/* Safari 和 Chrome */
+    -o-transition: top 1s;
+}
+
+#secview .f-z-pao {
+    -skrollr-animation-name: f-z-pao;
+    background: url(./images/1-duihuakuang.png) no-repeat;
+    width: 223px;
+    height: 129px;
+    background-size: 100% 100%;
+    position: relative;
+    top: 10px;
+
+    transition: left 2s;
+    -moz-transition: left 2s; /* Firefox 4 */
+    -webkit-transition: left 2s; /* Safari 和 Chrome */
+    -o-transition: left 2s;
+
+}
+
+#secview .pao-zi{
+    color:#cccccc;
+    font-size: 16px;
+    width: 150px;
+    display: block;
+    position: relative;
+    top:40px;
+    left:50px;
+}
+
+.leftcontent{
+    float: left;
+}
+
+.rightcontent{
+    float: right;
+}
+
+
+/*
+* 第二页布局
+*/
+.thirdviewren{
+    background: url(./images/2-ren.png) no-repeat top center;
+    width: 150px;
+    height: 400px;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+}
+
+.t-xingxing-one{
+    background: url(./images/2-xingxing.png);
+    width: 30px;
+    height: 25px;
+    background-size: 100% 100%;
+    position: relative;
+    left: 20px;
+    top:30px;
+}
+
+.t-xingxing-two{
+    background: url(./images/2-xingxing.png);
+    width: 20px;
+    height: 15px;
+    background-size: 100% 100%;
+    position: relative;
+    left: 100px;
+    top:20px;
+}
+
+.t-xingxing-three{
+    background: url(./images/2-xingxing.png);
+    width: 40px;
+    height: 35px;
+    background-size: 100% 100%;
+    position: relative;
+    left: 150px;
+    top:10px;
+}
+
+.viewbody-footer-titile-nm{
+    color: #333333;
+    opacity: 0.5;
+    font-size: 24px;
+    position: relative;
+    top:30px;
+}
+
+#thirdview .pao-zi{
+    color:#cccccc;
+    font-size: 16px;
+    width: 150px;
+    display: block;
+    position: relative;
+    top:30px;
+    left:35px;
+}
+
+
+#thirdview .viewbody{
+    -skrollr-animation-name:thirdcutopacity;
+    position: relative;
+    top:100px;
+}
+
+.t-chunsecar-f{
+    background: url(./images/2-che-chunse.png) no-repeat;
+    background-size: 100% 100%;
+    width: 120px;
+    height: 60px;
+    position: relative;
+    left: 160px;
+    top:15px;
+}
+
+.t-chunsecar-s{
+    background: url(./images/2-che-chunse.png) no-repeat;
+    background-size: 100% 100%;
+    width: 160px;
+    height: 80px;
+    position: relative;
+    left: -140px;
+    top:250px;
+}
+
+#thirdview .t-duihua{
+
+    -skrollr-animation-name:t-duihua;
+    background: url(./images/2-duihuakuang.png) no-repeat;
+    background-size: 100% 100%;
+    width: 223px;
+    height: 129px;
+    position: relative;
+    top:10px;
+
+    transition: left 2s;
+    -moz-transition: left 2s;	/* Firefox 4 */
+    -webkit-transition: left 2s;	/* Safari 和 Chrome */
+    -o-transition: left 2s;
+
+}
+
+#thirdview .t-color-car{
+    -skrollr-animation-name:t-color-car;
+    background: url(./images/2-che-caise.png) no-repeat;
+    width: 260px;
+    height: 139px;
+    background-size: 100% 100%;
+    position: relative;
+    top:30px;
+
+    z-index: 99995;
+
+    transition: left 1s, transform .5s;
+    -moz-transition: left 1s, transform .5s;	/* Firefox 4 */
+    -webkit-transition: left 1s, transform .5s;	/* Safari 和 Chrome */
+    -o-transition: left 1s, transform .5s;
+
+}
+
+/*
+第三页布局
+*/
+#fourthview .fourth-man{
+
+    -skrollr-animation-name:fourth-man;
+
+    background: url(./images/3-renwu.png);
+    width: 150px;
+    height: 400px;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+    left: 50px;
+}
+
+#fourthview .fourth-woman{
+
+    -skrollr-animation-name:fourth-woman;
+    background: url(./images/3-nvren.png);
+    width: 100px;
+    height: 320px;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+    top:40px;
+    left: -100px;
+}
+
+#fourthview .viewbody{
+
+    -skrollr-animation-name:fourthcutopacity;
+    background: url("./images/3-diban.png") no-repeat center 260px;
+    background-size: 696px 175px;
+    position: relative;
+    top:100px;
+}
+
+#fourthview .manxia{
+
+    background: url("./images/3-shengyin.png") no-repeat;
+    width: 110px; /*修复left错误*/
+    height: 81px;
+    position: relative;
+    float: right;
+
+    animation:lrscale 1s infinite;
+    -moz-animation:lrscale 1s infinite; /* Firefox */
+    -webkit-animation:lrscale 1s infinite; /* Safari and Chrome */
+    -o-animation:lrscale 1s infinite; /* Opera */
+
+}
+
+#fourthview .womanhuo{
+
+    background: url("./images/3-huo.png") no-repeat;
+    width: 150px;
+    height: 100px;
+    background-size: 100% 100%;
+    position: relative;
+    top:-25px;
+    left: -20px;
+
+    animation:tbscale 2s infinite;
+    -moz-animation:tbscale 2s infinite; /* Firefox */
+    -webkit-animation:tbscale 2s infinite; /* Safari and Chrome */
+    -o-animation:tbscale 2s infinite; /* Opera */
+
+}
+
+@-skrollr-keyframes gone {
+
+    0 {
+        opacity: 1.0;
+        height: 350px;
+    }
+
+    1000 {
+        opacity: 0.0;
+        height: 0;
+    }
+
+}
+
+
+#fourthview .fourth-duihua{
+
+    -skrollr-animation-name:fourth-duihua;
+
+    background: url(./images/3-duihuakuang.png) no-repeat;
+    background-size: 100% 100%;
+    width: 200px;
+    height: 159px;
+    position: relative;
+    top:-80px;
+    float: right;
+    left: -5px;
+
+}
+
+#fourthview .pao-zi{
+
+    color:#cccccc;
+    font-size: 16px;
+    width: 150px;
+    display: block;
+    position: relative;
+    top:40px;
+    left:30px;
+
+}
+
+/*第四动画页布局*/
+.fifthren{
+    background: url(./images/4-ren.png) no-repeat top center;
+    width: 230px;
+    height: 400px;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+}
+
+#fifthview .viewbody{
+
+
+    -skrollr-animation-name:fifth-cutopacity;
+    background: url("./images/4-yiqunwangpo.png") no-repeat center 80px;
+    background-size: 450px 300px;
+    position: relative;
+    top:100px;
+}
+
+#fifthview .bottomyy{
+    background:url(./images/4-yinying.png) no-repeat center center;
+    background-size: 320px 40px;
+    width: 320px;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    top:-25px;
+    z-index: -10;
+    left: -18px ;
+}
+
+
+#fifthview .leftcontent .xigua-one{
+    -skrollr-animation-name:xiguascroll;
+    background: url(./images/4-xigua-shense.png) no-repeat;
+    width: 65px;
+    height: 80px;
+    background-size: 100% 100%;
+    position: relative;
+    left: 140px;
+    top:25px;
+    z-index: 99993;
+}
+
+#fifthview .leftcontent .xigua-two{
+    position: relative;
+    top:240px;
+    left: 90px;
+}
+
+#fifthview .leftcontent .xigua-two .xiaoxigua{
+
+    -skrollr-animation-name:xiguascroll;
+    background: url("./images/4-xigua-qianse.png") no-repeat;
+    width: 65px;
+    height: 80px;
+    background-size: 100% 100%;
+    float: left;
+}
+
+#fifthview .leftcontent .xigua-two .daxigua{
+    -skrollr-animation-name:xiguascroll;
+    background: url("./images/4-xigua-shense.png") no-repeat;
+    width: 85px;
+    height: 105px;
+    background-size: 100% 100%;
+    float: right;
+    z-index:99991;
+    position: relative;
+    left: -10px;
+    top:-25px;
+}
+
+
+#fifthview .rightcontent .xigua-one{
+
+    position: relative;
+    left: -140px;
+    top:100px;
+    z-index: 99991;
+
+}
+
+#fifthview .rightcontent .xigua-one .xiaoxigua{
+    -skrollr-animation-name:xiguascroll;
+    background: url("./images/4-xigua-qianse.png") no-repeat;
+    width: 60px;
+    height: 72px;
+    background-size: 100% 100%;
+    float: left;
+    position: relative;
+    left: 55px;
+}
+
+#fifthview .rightcontent .xigua-one .daxigua{
+    -skrollr-animation-name:xiguascroll;
+    background: url("./images/4-xigua-shense.png") no-repeat;
+    width: 45px;
+    height: 55px;
+    background-size: 100% 100%;
+    float: right;
+    position: relative;
+    top:-2px;
+}
+
+#fifthview .rightcontent .xigua-two{
+    -skrollr-animation-name:xiguascroll;
+    clear: both;
+    background: url("./images/4-xigua-qianse.png") no-repeat;
+    width: 75px;
+    height: 95px;
+    background-size: 100% 100%;
+    position: relative;
+    top:115px;
+    left: -30px;
+}
+
+#fifthview .fifthduihua{
+
+    background: url(./images/4-duihuakuang.png) no-repeat;
+    background-size: 100% 100%;
+    width: 160px;
+    height: 120px;
+    position: relative;
+    top:110px;
+    clear: both;
+    left: -80px;
+
+    animation:ftbscale 2s infinite;
+    -moz-animation:ftbscale 2s infinite; /* Firefox */
+    -webkit-animation:ftbscale 2s infinite; /* Safari and Chrome */
+    -o-animation:ftbscale 2s infinite; /* Opera */
+
+}
+
+#fifthview .fifthduihua .pao-zi{
+
+    color:#cccccc;
+    font-size: 14px;
+    width: 120px;
+    display: block;
+    position: relative;
+    top:20px;
+    left:25px;
+
+}
+
+#fifthview .viewbody-footer{
+    position: relative;
+    top:-40px;
+}
+
+/*最后一页动画布局*/
+.sixren{
+
+    -skrollr-animation-name:sixren;
+    background: url(./images/5-renwu.png) no-repeat top center;
+    width: 140px;
+    height: 320px;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#sixthview .viewbody .viewbody-main{
+
+    -skrollr-animation-name:sixth-cutopacity;
+    position: relative;
+    top:100px;
+}
+
+#sixthview .twotrees{
+
+    position: relative;
+    left: -20px;
+
+}
+
+#sixthview .lefttree{
+    background: url("./images/5-shu-xiao.png") no-repeat;
+    background-size: 100% 100%;
+    width: 120px;
+    height: 200px;
+    float: left;
+    position: relative;
+    top:150px;
+    left: 60px;
+}
+
+#sixthview .righttree{
+
+    background: url("./images/5-shu-da.png") no-repeat;
+    background-size: 100% 100%;
+    width: 160px;
+    height: 240px;
+    float: right;
+    position: relative;
+    top:115px;
+    left: 20px;
+
+}
+
+#sixthview .gu{
+    background: url("./images/5-gu.png") no-repeat;
+    background-size: 100% 100%;
+    width:59px;
+    height: 72px;
+    position: relative;
+    top:125px;
+    left: -50px;
+}
+
+#sixthview .sixduihua{
+    background:url("./images/5-duihuakuang.png") no-repeat;
+    background-size: 100% 100%;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top:10px;
+    z-index: -998;
+    left: -25px;
+}
+
+#sixthview .singleshu{
+
+    background: url("./images/5-shu-xiao.png") no-repeat;
+    background-size: 100% 100%;
+    width: 120px;
+    height: 200px;
+    float: right;
+    position: relative;
+    float: right;
+    top:40px;
+    left: -40px;
+
+}
+
+#sixthview .wanshu{
+    clear: both;
+}
+
+#sixthview .wan{
+    background: url("./images/5-wan.png");
+    background-size: 100% 100%;
+    width: 80px;
+    height: 57px;
+    position: relative;
+    float: left;
+    top:230px;
+    left: -40px;
+}
+
+#sixthview .viewbody-footer{
+
+    text-align: center;
+    position: relative;
+    top:-20px;
+}
+
+#sixthview .middle{
+    float: left;
+}
+
+#sixthview .pao-zi{
+
+    color:#cccccc;
+    font-size: 16px;
+    width: 140px;
+    display: block;
+    position: relative;
+    top:15px;
+    left:35px;
+
+}
+
+/*底部样式*/
+#footerlogo{
+    background: url("./images/6-che.png") no-repeat;
+    width: 297px;
+    height: 153px;
+    background-size: 100% 100%;
+    position: relative;
+    top:50px;
+    margin: auto;
+}
+
+#ouracdes{
+    position: relative;
+    top:120px;
+}
+
+#footermeta span{
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+#footermeta{
+    text-align: center;
+    position: relative;
+    top:180px;
+}
+
+.ourlinks{
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.ourlinks a{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+#footernav{
+    position: relative;
+    top:150px;
+    text-align: center;
+}
+
+.ouracdes li{
+    float: left;
+    list-style: none;
+    color: #ffffff;
+    margin: 0 50px 0 0;
+    text-align: center;
+}
+
+.oactitle{
+    font-weight: lighter;
+    font-size: 24px;
+    line-height: 48px;
+}
+
+.oacdes{
+    font-size: 14px;
+}
+
+/*第一页人物动画*/
+@-skrollr-keyframes secren{
+
+    0 {
+        left: 9999px;
+        opacity: 1.0;
+    }
+
+    1000 {
+        left:0;
+    }
+
+    2000 {
+        opacity: 0;
+    }
+
+}
+
+/*
+*第一页4s店背景动画1
+*/
+@-skrollr-keyframes s-one{
+
+    0 {
+        top: 1000px;
+        opacity: 1.0;
+    }
+
+    1000 {
+        top:55px;
+    }
+
+    2000 {
+        opacity: 0;
+    }
+
+}
+
+/*
+* 第一页4s店背景动画1
+*/
+@-skrollr-keyframes s-two{
+
+0 {
+    top: 1000px;
+    opacity: 1.0;
+}
+
+1000 {
+    top:80px;
+}
+
+2000 {
+    opacity: 0;
+}
+
+}
+
+/*
+* 日历动画
+*/
+@-skrollr-keyframes f-rili{
+
+    0 {
+        top: -9999px;
+        opacity: 0;
+    }
+
+    1000 {
+        top:150px;
+        opacity: 1.0;
+    }
+
+    2000 {
+        opacity: 0;
+    }
+
+}
+
+/*
+* 第一页字泡动画
+*/
+
+@-skrollr-keyframes f-z-pao{
+
+    0 {
+        left: -9999px;
+        opacity: 0;
+    }
+
+    1000 {
+        left:0;
+        opacity: 1.0;
+    }
+
+    2000 {
+        opacity: 0;
+    }
+
+}
+
+/*
+* 第一页opacity纯渐变
+*/
+@-skrollr-keyframes fcutopacity{
+
+    0 {
+        opacity: 0;
+    }
+
+    1000 {
+        opacity: 1.0;
+    }
+
+    2000 {
+        opacity: 0;
+    }
+
+}
+
+/*
+* 第二页动画
+*/
+@-skrollr-keyframes t-color-car{
+
+    1000{
+        left: 9999px;
+
+        transform: skew(-120deg,0deg);
+        -ms-transform: skew(-120deg,0deg);	/* IE 9 */
+        -webkit-transform: skew(-120deg,0deg);	/* Safari and Chrome */
+        -o-transform: skew(-120deg,0deg);	/* Opera */
+        -moz-transform: skew(-120deg,0deg);	/* Firefox */
+
+    }
+
+    2000 {
+        opacity: 1.0;
+        left:0;
+
+        transform: skew(0deg,0deg);
+        -ms-transform: skew(0deg,0deg);	/* IE 9 */
+        -webkit-transform: skew(0deg,0deg);	/* Safari and Chrome */
+        -o-transform: skew(0deg,0deg);	/* Opera */
+        -moz-transform: skew(0deg,0deg);	/* Firefox */
+    }
+
+    3000 {
+        opacity: 0;
+    }
+}
+
+@-skrollr-keyframes thirdcutopacity{
+
+    1000 {
+        opacity: 0;
+    }
+
+    2000 {
+        opacity: 1.0;
+    }
+
+    3000 {
+        opacity: 0;
+    }
+
+}
+
+
+@-skrollr-keyframes t-duihua{
+
+    1000 {
+        left: 1000px;
+    }
+
+    2000 {
+        left:0;
+    }
+
+    3000 {
+        left: 1000px;
+    }
+
+}
+
+/*第三页动画效果*/
+@-skrollr-keyframes fourth-man{
+    2000 {
+        left: 1000px;
+    }
+
+    3000 {
+        left:50px;
+    }
+
+    4000 {
+        left: 1000px;
+    }
+
+}
+
+@-skrollr-keyframes fourth-duihua{
+
+    2000 {
+        top: 1000px;
+    }
+
+    3000 {
+        top:-80px;
+    }
+
+    4000 {
+        top: 1000px;
+    }
+}
+
+@-skrollr-keyframes fourth-woman{
+    2000 {
+        left: -1000px;
+    }
+
+    3000 {
+        left:-100px;
+    }
+
+    4000 {
+        left: -1000px;
+    }
+}
+
+@-skrollr-keyframes fourthcutopacity{
+
+    2000 {
+        opacity: 0;
+    }
+
+    3000 {
+        opacity: 1.0;
+    }
+
+    4000 {
+        opacity: 0;
+    }
+
+
+}
+
+/*倒数第二页动画的渐变*/
+@-skrollr-keyframes fifth-cutopacity{
+
+    3000 {
+        opacity: 0;
+    }
+
+    4000 {
+        opacity: 1.0;
+    }
+
+    5000 {
+        opacity: 0;
+    }
+
+}
+
+/*最后一页动画*/
+@-skrollr-keyframes sixren{
+
+    4000 {
+        top: 9999px;
+    }
+
+    5000 {
+        top: 0;
+    }
+
+}
+
+@-skrollr-keyframes sixth-cutopacity{
+
+    4000 {
+        opacity: 0;
+    }
+
+    5000 {
+        opacity: 1.0;
+    }
+
+    6000 {
+        opacity: 0;
+    }
+
+}
+
+
+@-skrollr-keyframes xiguascroll{
+
+    3000 {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);		/* IE 9 */
+        -webkit-transform: rotate(360deg);	/* Safari and Chrome */
+        -o-transform: rotate(360deg);		/* Opera */
+        -moz-transform: rotate(360deg);		/* Firefox */
+    }
+
+    4000 {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);		/* IE 9 */
+        -webkit-transform: rotate(0deg);	/* Safari and Chrome */
+        -o-transform: rotate(0deg);		/* Opera */
+        -moz-transform: rotate(0deg);		/* Firefox */
+    }
+
+    5000 {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);		/* IE 9 */
+        -webkit-transform: rotate(360deg);	/* Safari and Chrome */
+        -o-transform: rotate(360deg);		/* Opera */
+        -moz-transform: rotate(360deg);		/* Firefox */
+
+    }
+
+}
+
+
+@-skrollr-keyframes rotateround{
+
+    0 {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);		/* IE 9 */
+        -webkit-transform: rotate(360deg);	/* Safari and Chrome */
+        -o-transform: rotate(360deg);		/* Opera */
+        -moz-transform: rotate(360deg);		/* Firefox */
+    }
+
+    1000 {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);		/* IE 9 */
+        -webkit-transform: rotate(0deg);	/* Safari and Chrome */
+        -o-transform: rotate(0deg);		/* Opera */
+        -moz-transform: rotate(0deg);		/* Firefox */
+    }
+}
+
+@-skrollr-keyframes downloadapp{
+
+    0 {
+        top:30px;
+        width: 280px;
+        opacity:1.0;
+    }
+
+    1000 {
+        top:10px;
+        width: 600px;
+        opacity:1.0;
+    }
+
+    3000{
+        opacity:1.0;
+    }
+
+    4000{
+        opacity:1.0;
+    }
+
+    5000{
+        opacity:1.0;
+    }
+
+    6000{
+        opacity:0.0;
+    }
+}
+
+@-skrollr-keyframes changefloat{
+
+    0 {
+        float: none;
+    }
+
+    1000 {
+        float: left;
+    }
+
+}
+
+@-skrollr-keyframes downloaddes{
+
+    0 {
+        float: none;
+        position: relative;
+        top:0;
+        left: 0;
+        font-size: 16px;
+    }
+
+    1000 {
+        float: right;
+        position: relative;
+        top:20px;
+        left: -50px;
+        font-size: 24px;
+    }
+}
+
+@-skrollr-keyframes mainscroll {
+    0 {
+        height: 100%;
+    }
+
+    1000 {
+        height: 0;
+    }
+}
+
+@-skrollr-keyframes secscroll{
+    1000 {
+        height: 100%;
+    }
+
+    2000 {
+        height: 0;
+    }
+}
+
+@-skrollr-keyframes thirdscroll{
+    2000 {
+        height: 100%;
+    }
+
+    3000 {
+        height: 0;
+    }
+
+}
+
+@-skrollr-keyframes fourthscroll{
+    3000 {
+        height: 100%;
+    }
+
+    4000 {
+        height: 0;
+    }
+
+}
+
+@-skrollr-keyframes fifthscroll{
+
+    4000 {
+        height: 100%;
+    }
+
+    5000 {
+        height: 0;
+    }
+
+}
+
+@-skrollr-keyframes sixthscroll{
+
+    5000 {
+        height: 100%;
+    }
+
+    6000 {
+        height: 0;
+    }
+
+}
+
+
+@-skrollr-keyframes gonone {
+    0 {
+        height: 90px;
+    }
+
+    1000 {
+        height: 0;
+    }
+}
+
+@-skrollr-keyframes gone {
+    0 {
+        opacity: 1.0;
+        height:280px;
+    }
+
+    1000 {
+        opacity: 0.0;
+        height:0;
+    }
+}
+
+@-skrollr-keyframes downloadpop {
+    0 {
+        height:0;
+    }
+
+    1000 {
+        height: 90px;
+    }
+
+    2000 {
+        height: 90px;
+    }
+
+    3000 {
+        height: 90px;
+    }
+
+    4000{
+        height: 90px;
+    }
+
+    5000 {
+        height:90px;
+    }
+
+    6000 {
+        height: 0;
+    }
+}
+
+/*
+* 人物动画
+*/
+
+@keyframes bounceman
+{
+    0%   {top:0px;}
+    25%  {top:0px;}
+    50%  {top:100px;}
+    75%  {top:100px;}
+    100% {top:0px;}
+}
+
+@-moz-keyframes bounceman /* Firefox */
+{
+    0%   {top:0px;}
+    25%  {top:0px;}
+    50%  {top:100px;}
+    75%  {top:100px;}
+    100% {top:0px;}
+}
+
+@-webkit-keyframes bounceman /* Safari 和 Chrome */
+{
+    0%   {top:0px;}
+    25%  {top:0px;}
+    50%  {top:100px;}
+    75%  {top:100px;}
+    100% {top:0px;}
+}
+
+@-o-keyframes bounceman /* Opera */
+{
+    0%   {top:0px;}
+    25%  {top:0px;}
+    50%  {top:100px;}
+    75%  {top:100px;}
+    100% {top:0px;}
+}
+
+/*左右并放大*/
+@keyframes lrscale
+{
+    0%   {left:80px;}
+    25%  {left:78px;}
+    50%  {left:80px;}
+    75%  {left:78px;}
+    100% {left:80px;}
+}
+
+@-moz-keyframes lrscale /* Firefox */
+{
+    0%   {left:80px;}
+    25%  {left:78px;}
+    50%  {left:80px;}
+    75%  {left:78px;}
+    100% {left:80px;}
+}
+
+@-webkit-keyframes lrscale /* Safari 和 Chrome */
+{
+    0%   {left:80px;}
+    25%  {left:78px;}
+    50%  {left:80px;}
+    75%  {left:78px;}
+    100% {left:80px;}
+}
+
+@-o-keyframes lrscale /* Opera */
+{
+    0%   {left:80px;}
+    25%  {left:78px;}
+    50%  {left:80px;}
+    75%  {left:78px;}
+    100% {left:80px;}
+}
+
+
+/*上下并放大*/
+@keyframes tbscale
+{
+    0%   {top:-25px;}
+    25%  {top:-20px;}
+    50%  {top:-25px;}
+    75%  {top:-20px;}
+    100% {top:-25px;}
+}
+
+@-moz-keyframes tbscale /* Firefox */
+{
+    0%   {top:-25px;}
+    25%  {top:-20px;}
+    50%  {top:-25px;}
+    75%  {top:-20px;}
+    100% {top:-25px;}
+}
+
+@-webkit-keyframes tbscale /* Safari 和 Chrome */
+{
+    0%   {top:-25px;}
+    25%  {top:-20px;}
+    50%  {top:-25px;}
+    75%  {top:-20px;}
+    100% {top:-25px;}
+}
+
+@-o-keyframes tbscale /* Opera */
+{
+    0%   {top:-25px;}
+    25%  {top:-20px;}
+    50%  {top:-25px;}
+    75%  {top:-20px;}
+    100% {top:-25px;}
+}
+
+/*上下并放大-5*/
+@keyframes ftbscale
+{
+    0%   {top:110px;}
+    25%  {top:100px;}
+    50%  {top:110px;}
+    75%  {top:100px;}
+    100% {top:110px;}
+}
+
+@-moz-keyframes ftbscale /* Firefox */
+{
+    0%   {top:110px;}
+    25%  {top:100px;}
+    50%  {top:110px;}
+    75%  {top:100px;}
+    100% {top:110px;}
+}
+
+@-webkit-keyframes ftbscale /* Safari 和 Chrome */
+{
+    0%   {top:110px;}
+    25%  {top:100px;}
+    50%  {top:110px;}
+    75%  {top:100px;}
+    100% {top:110px;}
+}
+
+@-o-keyframes ftbscale /* Opera */
+{
+    0%   {top:110px;}
+    25%  {top:100px;}
+    50%  {top:110px;}
+    75%  {top:100px;}
+    100% {top:110px;}
+}
+
+/*下载逻辑*/
+#downloadiosapp,#downloadandroidapp{
+    color:#ffffff;
+    text-decoration: none;
+}
