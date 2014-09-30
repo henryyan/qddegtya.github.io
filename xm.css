@@ -907,6 +907,7 @@ body{
     display: block;
     color: #ffffff;
     font-size: 12px;
+    line-height: 18px;
 }
 
 #footermeta{
@@ -941,8 +942,8 @@ body{
 
 .oactitle{
     font-weight: lighter;
-    font-size: 24px;
-    line-height: 48px;
+    font-size: 18px;
+    line-height: 36px;
 }
 
 .oacdes{
